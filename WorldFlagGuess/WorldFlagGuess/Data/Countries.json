@@ -1,0 +1,37 @@
+﻿[
+  {
+    "Name": "Viet Nam",
+    "Capital": "Ha Noi",
+    "Population": 97340000,
+    "Area": 331212,
+    "Continent": "Asia"
+  },
+  {
+    "Name": "Korea",
+    "Capital": "Seoul",
+    "Population": 51740000,
+    "Area": 100210,
+    "Continent": "Asia"
+  },
+  {
+    "Name": "Nhật Bản",
+    "Capital": "Tokyo",
+    "Population": 125800000,
+    "Area": 377975,
+    "Continent": "Châu Á"
+  },
+  {
+    "Name": "Brazil",
+    "Capital": "Brasília",
+    "Population": 215300000,
+    "Area": 8515767,
+    "Continent": "Châu Mỹ"
+  },
+  {
+    "Name": "Pháp",
+    "Capital": "Paris",
+    "Population": 67750000,
+    "Area": 551695,
+    "Continent": "Châu Âu"
+  }
+]
