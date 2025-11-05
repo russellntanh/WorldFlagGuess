@@ -18,29 +18,9 @@ namespace WorldFlagGuess
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<Country> _countries;
-        private CountryService _countryService;
         public MainWindow()
         {
             InitializeComponent();
-            _countryService = new CountryService();
-            _countries = _countryService.GetCountries();
-            CountryListBox.ItemsSource = _countries;
-        }
-
-        private void CountryListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (CountryListBox.SelectedItem is Country country)
-            {
-                TxtName.Text = $"Nation: {country.Name}";
-                TxtCapital.Text = $"Capital: {country.Capital}";
-                TxtContinent.Text = $"Region: {country.Continent}";
-                TxtPopulation.Text = $"Population: {country.Population}";
-                TxtArea.Text = $"Area: {country.Area}";
-
-                DetailPanel.Visibility = Visibility.Visible;
-
-            }
         }
     }
 }

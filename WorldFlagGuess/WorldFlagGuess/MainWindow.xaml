@@ -5,7 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorldFlagGuess"
         mc:Ignorable="d"
+        xmlns:vm="clr-namespace:WorldFlagGuess.ViewModels"
         Title="MainWindow" Height="450" Width="800">
+    
+    <!--Set DataContext = MainViewModel-->
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+    
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -18,18 +25,19 @@
 
         <!--Chon quoc gia-->
         <ListBox x:Name="CountryListBox" Grid.Row="1"
-                 SelectionChanged="CountryListBox_SelectionChanged"
+                 ItemsSource="{Binding Countries}"
+                 SelectedItem="{Binding SelectedCountry, Mode=TwoWay}"
                  DisplayMemberPath="Name"
                  Margin="0,0,0,10"/>
         
         <!--Thong tin chi tiet-->
         <Border Grid.Row="2" Background="#9C8D8D" Padding="10" CornerRadius="5">
-            <StackPanel x:Name="DetailPanel" Visibility="Collapsed">
-                <TextBlock x:Name="TxtName" FontWeight="Bold" FontSize="16"/>
-                <TextBlock x:Name="TxtCapital"/>
-                <TextBlock x:Name="TxtPopulation"/>
-                <TextBlock x:Name="TxtArea"/>
-                <TextBlock x:Name="TxtContinent"/>
+            <StackPanel Visibility="{Binding SelectedCountry}">
+                <TextBlock Text="{Binding SelectedCountry.Name, StringFormat='Nation: {0}'}" FontWeight="Bold" FontSize="16"/>
+                <TextBlock Text="{Binding SelectedCountry.Capital, StringFormat='Capital: {0}'}"/>
+                <TextBlock Text="{Binding SelectedCountry.Population, StringFormat='Population: {0}'}"/>
+                <TextBlock Text="{Binding SelectedCountry.Area, StringFormat='Area: {0}'}"/>
+                <TextBlock Text="{Binding SelectedCountry.Continent, StringFormat='Continent: {0}'}"/>
             </StackPanel>
         </Border>
     </Grid>
