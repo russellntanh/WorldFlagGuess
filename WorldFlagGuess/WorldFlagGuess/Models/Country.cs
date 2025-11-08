@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace WorldFlagGuess.Models
@@ -21,6 +22,7 @@ namespace WorldFlagGuess.Models
     {
         public string Name { get; set; }
         public string Capital { get; set; }
+        [JsonPropertyName("Continent")]
         public string Continent { get; set; }
         public long Population { get; set; }
         public int Area { get; set; } // km2

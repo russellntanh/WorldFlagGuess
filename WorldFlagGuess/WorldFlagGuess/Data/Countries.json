@@ -18,20 +18,20 @@
     "Capital": "Tokyo",
     "Population": 125800000,
     "Area": 377975,
-    "Continent": "Châu Á"
+    "Continent": "Asia"
   },
   {
     "Name": "Brazil",
-    "Capital": "Brasília",
+    "Capital": "Brasilia",
     "Population": 215300000,
     "Area": 8515767,
-    "Continent": "Châu Mỹ"
+    "Continent": "America"
   },
   {
     "Name": "Pháp",
     "Capital": "Paris",
     "Population": 67750000,
     "Area": 551695,
-    "Continent": "Châu Âu"
+    "Continent": "Europe"
   }
 ]
